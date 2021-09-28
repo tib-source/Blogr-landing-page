@@ -5,7 +5,6 @@ const dropdownContent = document.querySelectorAll(".dropdown-content")
 
 hamburger.addEventListener("click", function(){
     let visibile = hamburgerMenu.style.visibility 
-    console.log(visibile)
     if(visibile == "hidden" || visibile == ""){
         return hamburgerMenu.style.visibility = "visible"
     }else{
@@ -20,12 +19,11 @@ dropdown.forEach((button, index) => {
     button.addEventListener("click", function(){
         
         let display = dropdownContent[index].style.display
-
         if(display=="none"||display==""){
-            document.querySelectorAll(".arrow")[index].style.rotate = "-180deg"
+            document.querySelectorAll(".arrow")[index].style.transform = "rotate(-180deg)"
             return dropdownContent[index].style.display = "flex"
         }else{
-            document.querySelectorAll(".arrow")[index].style.rotate = "0deg"
+            document.querySelectorAll(".arrow")[index].style.transform = "rotate(0deg)"
             return dropdownContent[index].style.display = "none"
         }
     })
