@@ -68,10 +68,97 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .section .menu__links {
-  display: none;
+  display: block;
+  width: 337.5px;
+  position: absolute;
+  left: -910%;
+  top: 50px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 1.25rem;
+  font-family: "Overpass";
+  -webkit-box-shadow: 0 10px 20px #ccc;
+          box-shadow: 0 10px 20px #ccc;
+  border-radius: 0.5em;
+}
+
+.section .menu__links .drop {
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: "Overpass";
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.section .menu__links .dropdown-content {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  background: #EFEFF1;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: #4b5862;
+}
+
+.section .menu__links .dropdown-content a {
+  text-decoration: none;
+  color: #4b5862;
+  padding: 10px 0;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.section .menu__links .line {
+  width: 100%;
+  height: 1px;
+  opacity: 0.2;
+  background: #25252d;
+  margin: 20px 0;
+}
+
+.section .menu__links .login, .section .menu__links .signup {
+  margin: auto;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-family: "Ubuntu";
+  margin-top: 0.5rem;
+  padding: 1rem 3rem;
+  font-size: 16px;
+  border-radius: 5rem;
+  background: -webkit-gradient(linear, right top, left top, from(#ff3d54), to(#ff8f70));
+  background: linear-gradient(to left, #ff3d54, #ff8f70);
+}
+
+.section .menu__links .login {
+  background: none;
+  color: #4b5862;
+  font-size: 1.25rem;
+}
+
+.section .menu .display {
+  display: block;
 }
 
 .section main {
