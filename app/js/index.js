@@ -19,6 +19,7 @@ dropdown.forEach((button, index) => {
     button.addEventListener("click", function(){
         
         let display = dropdownContent[index].style.display
+        button.classList.toggle("op")
         if(display=="none"||display==""){
             document.querySelectorAll(".arrow")[index].style.transform = "rotate(-180deg)"
             return dropdownContent[index].style.display = "flex"

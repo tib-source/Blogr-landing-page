@@ -30,6 +30,23 @@
         &>*{
             transition: 0.4s;
         }
+        #menu{
+            cursor: pointer;
+
+        }
+        @keyframes opac {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.7;
+            }
+            
+        }
+        .op{
+            animation: opac 0.4s ;
+            animation-fill-mode: forwards;
+        }
 
         &__links{
             visibility: hidden;
@@ -75,6 +92,7 @@
                     padding: 10px 0 ;
                     font-weight: 600;
                     opacity: 0.8;
+                    transition: 0.4s;
                 }
             }
 
