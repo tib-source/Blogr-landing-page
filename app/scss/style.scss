@@ -2,24 +2,25 @@
 
 .section{
     position: relative;
-    width: 480px;
     border: 1px solid #d0d0d0;
 
     .landing{
         position: relative;
         height: 700px;
-        width: 480px;
-        background: url("./../../images/bg-pattern-intro.svg") top ;
-        background-size: cover;
+        border-bottom-left-radius: 10em;
+        background: linear-gradient(to right bottom,$firstRed,$secondRed);
+        overflow: hidden;
+
         &::before{
-            content: "";
+            content: url("./../../images/bg-pattern-intro.svg");
             display: block;
             position: absolute;
-            z-index: -1;
             width: 100%;
             height: 100%;
-            border-bottom-left-radius: 10em;
-            background: linear-gradient($firstRed, $secondRed);
+            bottom: 200%;
+            left: -20%;
+            mix-blend-mode: soft-light;
+
         }
     }
     header{
@@ -144,3 +145,23 @@
     }
 }
 
+
+@media only screen and (min-width:900px) {
+    .section{
+      
+        article{
+            text-align: left;
+        }
+        .free{
+            flex-direction:row;
+        }
+        .editor{
+            flex-direction: row-reverse;
+        }
+        .info-phone{
+            width: 100%;
+        }
+        
+    }
+
+}

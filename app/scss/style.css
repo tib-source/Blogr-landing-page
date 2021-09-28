@@ -29,32 +29,32 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
+  background: #FAFAFA;
 }
 
 .section {
   position: relative;
-  width: 480px;
   border: 1px solid #d0d0d0;
 }
 
 .section .landing {
   position: relative;
   height: 700px;
-  width: 480px;
-  background: url("./../../images/bg-pattern-intro.svg") top;
-  background-size: cover;
+  border-bottom-left-radius: 10em;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(to right bottom, #ff8f70, #ff3d54);
+  overflow: hidden;
 }
 
 .section .landing::before {
-  content: "";
+  content: url("./../../images/bg-pattern-intro.svg");
   display: block;
   position: absolute;
-  z-index: -1;
   width: 100%;
   height: 100%;
-  border-bottom-left-radius: 10em;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
-  background: linear-gradient(#ff8f70, #ff3d54);
+  bottom: 200%;
+  left: -20%;
+  mix-blend-mode: soft-light;
 }
 
 .section header {
@@ -211,5 +211,26 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 900px) {
+  .section article {
+    text-align: left;
+  }
+  .section .free {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .section .editor {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .section .info-phone {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
