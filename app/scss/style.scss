@@ -1,0 +1,24 @@
+@import "globals";
+
+.section{
+    position: relative;
+    height: 1020px;
+    width: 480px;
+    border: 1px solid #d0d0d0;
+    background: url("./../../images/bg-pattern-intro.svg") top ;
+    background-size: cover;
+    header{
+        width: 100%;
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border-bottom-left-radius: 10em;
+        background: linear-gradient($firstRed, $secondRed);
+    }
+}
