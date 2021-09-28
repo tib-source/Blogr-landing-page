@@ -83,6 +83,8 @@
     }
 
     article{
+        overflow-x: hidden;
+
         text-align: center;
         margin: auto;
         display: flex;
@@ -107,14 +109,15 @@
     .info-phone{
         margin: 0;
         margin: 20em 0 5em ;
-        height: 600px;
-        border-radius: 0rem 10rem ;
+        height: 700px;
+        border-radius: 0rem 8   rem ;
         background:linear-gradient($secondBlue, $firstBlue);
         position: relative;
-        
 
         picture{
             position: absolute;
+            margin: 0;
+            padding: 0;
             left: 50%;
             transform: translate(-50%);
             top: -35%;
