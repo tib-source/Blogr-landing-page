@@ -16,6 +16,7 @@ body {
           flex-direction: column;
   font-family: "Ubuntu";
   font-weight: 400;
+  font-size: 1rem;
 }
 
 .section {
@@ -23,15 +24,17 @@ body {
   height: 1020px;
   width: 480px;
   border: 1px solid #d0d0d0;
+}
+
+.section .landing {
+  position: relative;
+  height: 700px;
+  width: 480px;
   background: url("./../../images/bg-pattern-intro.svg") top;
   background-size: cover;
 }
 
-.section header {
-  width: 100%;
-}
-
-.section::before {
+.section .landing::before {
   content: "";
   display: block;
   position: absolute;
@@ -41,5 +44,77 @@ body {
   border-bottom-left-radius: 10em;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background: linear-gradient(#ff8f70, #ff3d54);
+}
+
+.section header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4em 2rem;
+}
+
+.section .menu {
+  width: auto;
+}
+
+.section .menu__links {
+  display: none;
+}
+
+.section main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  color: white;
+}
+
+.section main h1 {
+  font-family: "Overpass";
+  font-weight: 600;
+  font-size: 47px;
+  margin: 40px 0 20px 0;
+}
+
+.section main small {
+  font-family: "Overpass";
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.section main .cta {
+  padding: 2.5rem;
+}
+
+.section main .cta button {
+  margin: 0 0.8em;
+  padding: 1em;
+  color: white;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 2em;
+  background: none;
+  border: 1px solid white;
+}
+
+.section main .cta .left {
+  color: #ff525d;
+  background: white;
 }
 /*# sourceMappingURL=style.css.map */
