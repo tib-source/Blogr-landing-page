@@ -71,8 +71,13 @@ body {
   position: relative;
 }
 
+.section .menu > * {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 .section .menu__links {
-  display: block;
+  visibility: hidden;
   width: 337.5px;
   position: absolute;
   left: -910%;
@@ -103,10 +108,8 @@ body {
 }
 
 .section .menu__links .dropdown-content {
+  display: none;
   width: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -155,10 +158,6 @@ body {
   background: none;
   color: #4b5862;
   font-size: 1.25rem;
-}
-
-.section .menu .display {
-  display: block;
 }
 
 .section main {
