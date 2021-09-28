@@ -2,7 +2,6 @@
 
 .section{
     position: relative;
-    height: 1020px;
     width: 480px;
     border: 1px solid #d0d0d0;
 
@@ -80,6 +79,68 @@
                 background: $white;
             }
         }
+    }
+
+    article{
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5em;
+        h2{
+            font-size: toRem(28);
+            color: $heading;
+        }
+        p{
+            color:$body;
+            font-family: $overpass;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+        picture{
+            padding:1em 0;
+        }
+    }
+
+    .info-phone{
+        margin: 0;
+        margin: 20em 0 5em ;
+        height: 600px;
+        border-radius: 0rem 10rem ;
+        background:linear-gradient($secondBlue, $firstBlue);
+        position: relative;
+        
+
+        picture{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: -35%;
+        }
+        h2{
+            font-family: $overpass;
+            font-size: toRem(36);
+        }
+        .info{
+            padding-top: 15rem;
+
+        }
+        h2, p{
+            padding-top: 20px;
+            width: 65%;
+            margin: auto;
+            color: $white;
+        }
+        p{
+            opacity: 0.6;
+        }
+    }
+    .free, .editor{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 

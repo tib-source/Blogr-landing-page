@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 body {
   min-height: 100vh;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,11 +28,11 @@ body {
   font-family: "Ubuntu";
   font-weight: 400;
   font-size: 1rem;
+  line-height: 1.5;
 }
 
 .section {
   position: relative;
-  height: 1020px;
   width: 480px;
   border: 1px solid #d0d0d0;
 }
@@ -116,5 +127,89 @@ body {
 .section main .cta .left {
   color: #ff525d;
   background: white;
+}
+
+.section article {
+  text-align: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5em;
+}
+
+.section article h2 {
+  font-size: 1.75rem;
+  color: #1f3f5b;
+}
+
+.section article p {
+  color: #4b5862;
+  font-family: "Overpass";
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.section article picture {
+  padding: 1em 0;
+}
+
+.section .info-phone {
+  margin: 0;
+  margin: 20em 0 5em;
+  height: 600px;
+  border-radius: 0rem 10rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3f4164), to(#2c2d3f));
+  background: linear-gradient(#3f4164, #2c2d3f);
+  position: relative;
+}
+
+.section .info-phone picture {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  top: -35%;
+}
+
+.section .info-phone h2 {
+  font-family: "Overpass";
+  font-size: 2.25rem;
+}
+
+.section .info-phone .info {
+  padding-top: 15rem;
+}
+
+.section .info-phone h2, .section .info-phone p {
+  padding-top: 20px;
+  width: 65%;
+  margin: auto;
+  color: white;
+}
+
+.section .info-phone p {
+  opacity: 0.6;
+}
+
+.section .free, .section .editor {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
