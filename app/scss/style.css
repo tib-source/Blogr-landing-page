@@ -33,14 +33,15 @@ body {
 }
 
 .section {
+  width: 100%;
   position: relative;
   border: 1px solid #d0d0d0;
 }
 
 .section .landing {
   position: relative;
-  height: 700px;
-  border-bottom-left-radius: 10em;
+  height: 625px;
+  border-bottom-left-radius: 5.6em;
   background: -webkit-gradient(linear, left top, right bottom, from(#ff8f70), to(#ff3d54));
   background: linear-gradient(to right bottom, #ff8f70, #ff3d54);
   overflow: hidden;
@@ -50,6 +51,7 @@ body {
   content: url("./../../images/bg-pattern-intro.svg");
   display: block;
   position: absolute;
+  z-index: -1;
   width: 100%;
   height: 100%;
   bottom: 200%;
@@ -64,11 +66,18 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 4em 2rem;
+  padding: 60px 2rem;
 }
 
 .section .menu {
   width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .section .menu__links {
@@ -90,7 +99,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  width: 90%;
+  width: 80%;
   margin: auto;
   color: white;
 }
@@ -98,23 +107,24 @@ body {
 .section main h1 {
   font-family: "Overpass";
   font-weight: 600;
-  font-size: 47px;
-  margin: 40px 0 20px 0;
+  font-size: 2.0625rem;
+  margin: 40px 0 10px 0;
 }
 
 .section main small {
   font-family: "Overpass";
-  font-size: 1.5rem;
+  font-size: 1.0625rem;
   font-weight: 300;
 }
 
 .section main .cta {
-  padding: 1.5rem;
+  padding: 2rem 0;
 }
 
 .section main .cta button {
-  margin: 0 0.8em;
-  padding: 1em;
+  cursor: pointer;
+  margin: 0 0.3em;
+  padding: 0.8em 1em;
   color: white;
   font-family: "Ubuntu";
   font-weight: 700;
@@ -122,11 +132,23 @@ body {
   border-radius: 2em;
   background: none;
   border: 1px solid white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.section main .cta button:hover {
+  background: white;
+  color: #ff525d;
 }
 
 .section main .cta .left {
   color: #ff525d;
   background: white;
+}
+
+.section main .cta .left:hover {
+  color: white;
+  background: #ff7a85;
 }
 
 .section article {
@@ -148,13 +170,16 @@ body {
 
 .section article h2 {
   font-size: 1.75rem;
+  font-family: "Overpass";
   color: #1f3f5b;
 }
 
 .section article p {
   color: #4b5862;
+  font-size: 16px;
   font-family: "Overpass";
-  font-weight: 600;
+  font-weight: 300;
+  margin-bottom: 3rem;
   opacity: 0.8;
 }
 
@@ -164,8 +189,8 @@ body {
 
 .section .info-phone {
   margin: 0;
-  margin: 20em 0 5em;
-  height: 700px;
+  margin: 15em 0 5em;
+  height: 625px;
   border-radius: 0rem 8rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#3f4164), to(#2c2d3f));
   background: linear-gradient(#3f4164, #2c2d3f);
@@ -179,21 +204,21 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  top: -35%;
+  top: -30%;
 }
 
 .section .info-phone h2 {
   font-family: "Overpass";
-  font-size: 2.25rem;
+  font-size: 1.875rem;
 }
 
 .section .info-phone .info {
-  padding-top: 15rem;
+  padding-top: 14rem;
 }
 
 .section .info-phone h2, .section .info-phone p {
-  padding-top: 20px;
-  width: 65%;
+  padding-top: 10px;
+  width: 80%;
   margin: auto;
   color: white;
 }
@@ -203,7 +228,7 @@ body {
 }
 
 .section .free, .section .editor {
-  width: 65%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,6 +239,54 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.section footer .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #25252d;
+  padding: 5em 0;
+}
+
+.section footer .link .attribution {
+  display: inline-block;
+}
+
+.section footer .link > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section footer a {
+  color: #c8c8cb;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+.section footer span {
+  font-weight: 600;
+  padding: 2em 0em;
+  color: white;
+}
+
+.section footer span a {
+  color: white;
 }
 
 @media only screen and (min-width: 900px) {
