@@ -15,17 +15,20 @@ hamburger.addEventListener("click", function(){
 
 console.log(dropdown)
 
+function reset(){
+    // disable all other drop downs if they are open //
+    dropdownContent.forEach((e,i) => {
+        console.log(e)
+        document.querySelectorAll(".arrow")[i].style.transform = "rotate(0deg)"
+        return e.style.display = "none"
+    })
+}
 dropdown.forEach((button, index) => {
     button.addEventListener("click", function(){
         let display = dropdownContent[index].style.display
 
         // disable all other drop downs if they are open //
-        dropdownContent.forEach((e,i) => {
-            console.log(e)
-            document.querySelectorAll(".arrow")[i].style.transform = "rotate(0deg)"
-            return e.style.display = "none"
-        })
-
+        reset()
         // turn on current element
         button.classList.toggle("op")
         if(display=="none"||display==""){
