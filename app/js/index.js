@@ -19,6 +19,7 @@ function reset(){
     // disable all other drop downs if they are open //
     dropdownContent.forEach((e,i) => {
         console.log(e)
+        dropdown[i].classList.remove("op")
         document.querySelectorAll(".arrow")[i].style.transform = "rotate(0deg)"
         return e.style.display = "none"
     })
@@ -36,7 +37,9 @@ dropdown.forEach((button, index) => {
             return dropdownContent[index].style.display = "flex"
         }else{
             document.querySelectorAll(".arrow")[index].style.transform = "rotate(0deg)"
+            button.classList.toggle("op")
             return dropdownContent[index].style.display = "none"
+
         }
     })
 } )
