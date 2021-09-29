@@ -318,6 +318,7 @@ body {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   top: -30%;
+  z-index: 1000;
 }
 
 .section .info-phone h2 {
@@ -327,6 +328,24 @@ body {
 
 .section .info-phone .info {
   padding-top: 14rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section .info-phone .info::before {
+  mix-blend-mode: exclusion;
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 40%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: block;
+  width: 120%;
+  height: 100%;
+  background: url(./../../images/bg-pattern-circles.svg) no-repeat;
+  background-size: cover;
+  margin-top: -100px;
 }
 
 .section .info-phone h2, .section .info-phone p {
@@ -414,6 +433,75 @@ body {
 }
 
 @media only screen and (min-width: 900px) {
+  .section #menu {
+    display: none;
+  }
+  .section header {
+    padding: 88px 222px;
+  }
+  .section header .blogr {
+    width: 130px;
+  }
+  .section .menu {
+    height: 50px;
+  }
+  .section .menu__links {
+    width: 100%;
+    all: unset;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  .section .menu__links .dropdown {
+    position: relative;
+  }
+  .section .menu__links .dropdown .dropdown-content {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    background-color: #fff;
+    color: #4b5862;
+    -webkit-box-shadow: 0px 10px 20px rgba(75, 88, 98, 0.2);
+            box-shadow: 0px 10px 20px rgba(75, 88, 98, 0.2);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .section .menu__links .dropdown .dropdown-content a {
+    margin-left: 15px;
+    font-weight: 300;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .section .menu__links .dropdown .dropdown-content a:hover {
+    font-weight: 700;
+  }
+  .section .menu__links .group_down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section .menu__links .line {
+    width: 0;
+    height: 0;
+  }
+  .section .menu__links .login, .section .menu__links .signup {
+    margin: 0;
+  }
   .section article {
     text-align: left;
   }
