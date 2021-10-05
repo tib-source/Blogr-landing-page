@@ -566,6 +566,19 @@ body {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .section .editor picture {
+    width: 925px;
+    height: 882px;
+    display: block;
+    position: relative;
+  }
+  .section .editor picture img {
+    position: absolute;
+    left: 40%;
+  }
+  .section .editor .grouped {
+    width: 60%;
+  }
   .section .info-phone {
     width: 100%;
     height: auto;

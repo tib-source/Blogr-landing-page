@@ -272,6 +272,7 @@
         align-items: center;
     }
 
+
     footer{
         background: $footerbg;
         border-top-right-radius:6rem ;
@@ -437,6 +438,22 @@
         }
         .editor{
             flex-direction: row-reverse;
+
+            picture{
+                width: 925px;
+                height: 882px;
+                display: block;
+                position: relative;
+                img{
+                    position: absolute;
+                    left: 40%;
+                }
+            }
+
+            .grouped{
+                width: 60%;
+            }
+        
         }
         .info-phone{
             width: 100%;
