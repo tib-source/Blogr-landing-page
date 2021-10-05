@@ -322,6 +322,11 @@ body {
   z-index: 1000;
 }
 
+.section .info-phone picture img {
+  width: 400px;
+  height: auto;
+}
+
 .section .info-phone h2 {
   font-family: "Overpass";
   font-size: 1.875rem;
@@ -601,7 +606,8 @@ body {
   }
   .section .info-phone picture img {
     position: absolute;
-    height: 800px;
+    width: auto;
+    height: 880px;
     top: -30%;
     left: 10%;
   }
